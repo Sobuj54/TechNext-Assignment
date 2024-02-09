@@ -20,13 +20,12 @@ const SearchUser = ({ setUsers }) => {
       <label htmlFor="search" className="relative">
         <input
           type="text"
-          name=""
           id="search"
           placeholder="Enter Name"
           onChange={handleInputChange}
           className="border-2 p-2 rounded-r-full rounded-l-full focus:outline-sky-300 border-sky-400 px-3"
         />
-        <CiSearch className="absolute top-[50%] translate-y-[-50%] right-5 text-lg font-medium" />
+        <CiSearch className="absolute top-[50%] translate-y-[-50%] right-5 text-lg font-medium text-black/60" />
       </label>
     </div>
   );

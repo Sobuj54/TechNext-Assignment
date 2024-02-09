@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
 import SearchUser from "../../../components/SearchUser";
 
-const Filter = ({ users, setUsers }) => {
-  const [value, setValue] = useState("default");
+const Filter = ({ users, setUsers, sortBy, setSortBy }) => {
   const handleSelectedValue = (e) => {
-    console.log(e.target.value);
-    setValue(e.target.value);
+    setSortBy(e.target.value);
   };
 
   return (
@@ -26,16 +23,11 @@ const Filter = ({ users, setUsers }) => {
             <select
               id="sort"
               onChange={handleSelectedValue}
-              defaultValue={value}
+              defaultValue={sortBy}
               className="w-40 h-10 text-center focus:outline-none ml-2">
-              <option value="default">Default</option>
-              <option value="Bedroom">Bedroom</option>
-              <option value="Living Room">Living Room</option>
-              <option value="Dining">Dining</option>
-              <option value="Office">Office</option>
-              <option value="Home Decor">Home Decor</option>
-              <option value="Outdoor">Outdoor</option>
-              <option value="Kids">Kids</option>
+              <option value="name">Name</option>
+              <option value="email">Email</option>
+              <option value="company">Company Name</option>
             </select>
           </label>
         </div>
@@ -49,4 +41,6 @@ export default Filter;
 Filter.propTypes = {
   users: PropTypes.array,
   setUsers: PropTypes.func,
+  sortBy: PropTypes.string,
+  setSortBy: PropTypes.func,
 };

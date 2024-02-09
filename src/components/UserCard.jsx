@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const UserCard = ({ user }) => {
   const { id, image, firstName, lastName, email, address, company } = user;
   return (
-    <div>
+    <div className="overflow-hidden mt-7">
       <img src={image} alt={firstName} className="object-cover w-full h-72" />
-      <div className="p-4 bg-slate-200">
+      <div className="p-4 bg-slate-200 h-full">
         <h5 className="py-2 text-lg font-bold">
           <Link to={`/user/${id}`}>
             {firstName} {lastName}

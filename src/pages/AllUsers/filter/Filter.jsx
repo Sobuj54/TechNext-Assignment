@@ -7,7 +7,7 @@ const Filter = ({ users, setUsers, sortBy, setSortBy }) => {
   };
 
   return (
-    <section className="flex items-center justify-between h-24 px-10 bg-orange-100">
+    <section className="flex flex-col items-center justify-between h-auto gap-3 px-5 py-3 bg-orange-100 md:py-0 md:gap-0 md:h-24 md:px-10 md:flex-row">
       {/* left part */}
       <div className="flex items-center gap-6">
         <p>Showing {users.length} results</p>
@@ -24,7 +24,7 @@ const Filter = ({ users, setUsers, sortBy, setSortBy }) => {
               id="sort"
               onChange={handleSelectedValue}
               defaultValue={sortBy}
-              className="w-40 h-10 text-center focus:outline-none ml-2">
+              className="w-40 h-10 ml-2 text-center focus:outline-none">
               <option value="name">Name</option>
               <option value="email">Email</option>
               <option value="company">Company Name</option>

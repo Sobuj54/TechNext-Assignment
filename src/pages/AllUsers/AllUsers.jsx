@@ -31,7 +31,7 @@ const AllUsers = () => {
       <Filter {...filterProps} />
 
       {users.length > 0 ? (
-        <div className="grid grid-cols-1 px-5 lg:px-0 gap-8 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto mb-10">
+        <div className="grid grid-cols-1 gap-5 px-5 mx-auto mt-10 mb-10 lg:px-0 md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl">
           {sortedUsers.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}

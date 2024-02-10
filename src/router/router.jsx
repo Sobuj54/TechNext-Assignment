@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import AllUsers from "../pages/AllUsers/AllUsers";
 import SingleUser from "../pages/SingleUser/SingleUser";
 import NotFound from "../pages/NotFoundPage/NotFound";
+import AddUser from "../pages/AddUser/AddUser";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: "user/:id",
         element: <SingleUser />,
+      },
+      {
+        path: "add-user",
+        element: <AddUser />,
       },
     ],
   },

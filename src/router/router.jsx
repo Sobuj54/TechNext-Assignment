@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import AllUsers from "../pages/AllUsers/AllUsers";
+import SingleUser from "../pages/SingleUser/SingleUser";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +11,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <AllUsers />,
+      },
+      {
+        path: "user/:id",
+        element: <SingleUser />,
       },
     ],
   },

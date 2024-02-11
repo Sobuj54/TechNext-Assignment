@@ -27,7 +27,7 @@ const AddUser = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.id > 100) {
-          toast.success("User was successfully added !", {
+          toast.success("User added successfully!", {
             position: "top-center",
           });
           e.target.reset();
